@@ -1,0 +1,16 @@
+/* --- ヘッダー --- */
+header {
+  background-color: $c-base;
+  color: white;
+  > nav {
+    display: flex;
+    justify-content: space-between;
+    > ul {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  a {
+    color: white;
+  }
+}

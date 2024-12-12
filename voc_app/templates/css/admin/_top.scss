@@ -1,0 +1,30 @@
+/* --- 管理者ページ --- */
+// 従業員情報
+#employee-name {
+  display: grid;
+  grid-template-columns: 20% repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem
+}
+
+// アンケート集計(全体)
+#aggregation {
+  fieldset {
+    display: grid;
+    grid-template-columns: 20% repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+  }
+  output {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    figure {
+      background-color: gray;
+      height: 8rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

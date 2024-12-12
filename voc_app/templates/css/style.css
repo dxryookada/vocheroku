@@ -1,0 +1,240 @@
+@charset "UTF-8";
+/* --- 共通CSS --- */
+h3, h2.survey-header {
+  padding-left: 0.7rem;
+  border-left: solid 0.5rem mediumblue;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body.survey-body {
+  max-width: 430px;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(24px, 2.6vw, 28px);
+}
+h2.survey-header {
+  display: inline-block;
+}
+
+h3 {
+  font-size: clamp(20px, 2.2vw, 24px);
+}
+
+/* --- 従業員ページログイン --- */
+#login-form {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+/* --- ヘッダー --- */
+header {
+  background-color: mediumblue;
+  color: white;
+}
+header > nav {
+  display: flex;
+  justify-content: space-between;
+}
+header > nav > ul {
+  display: flex;
+  gap: 1rem;
+}
+header a {
+  color: white;
+}
+
+/* --- アンケートページ --- */
+textarea {
+  height: 10rem;
+}
+
+/* --- 一般ユーザーページ --- */
+#period {
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+#commendation > ul {
+  display: flex;
+  gap: 1rem;
+  font-size: clamp(16px, 2vw, 24px);
+}
+#commendation > ul li:nth-of-type(1) > span {
+  color: gold;
+}
+#commendation > ul li:nth-of-type(2) > span {
+  color: silver;
+}
+#commendation > ul li:nth-of-type(3) > span {
+  color: saddlebrown;
+}
+
+.totalling > output {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 60% 40%;
+}
+.totalling > output > figure {
+  background-color: lightgray;
+}
+
+#ranking > output {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 60% 40%;
+}
+#ranking > output > ul {
+  font-size: clamp(16px, 2vw, 24px);
+}
+#ranking > output > ul li {
+  cursor: pointer;
+}
+#ranking > output > ul li:nth-of-type(1) span:nth-of-type(1) {
+  color: gold;
+}
+#ranking > output > ul li:nth-of-type(2) span:nth-of-type(1) {
+  color: silver;
+}
+#ranking > output > ul li:nth-of-type(3) span:nth-of-type(1) {
+  color: saddlebrown;
+}
+#ranking > output > div > span:nth-of-type(1) {
+  color: gold;
+}
+#ranking > output > div > figure {
+  height: 200px;
+  background-color: lightgray;
+}
+
+/* --- マイページ --- */
+#admin-update fieldset, #update fieldset {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+#admin-update fieldset > label, #update fieldset > label {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+/* --- 管理者ページ --- */
+#employee-name {
+  display: grid;
+  grid-template-columns: 20% repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+#aggregation fieldset {
+  display: grid;
+  grid-template-columns: 20% repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+#aggregation output {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+#aggregation output figure {
+  background-color: gray;
+  height: 8rem;
+}
+#aggregation output p {
+  text-align: center;
+}
+
+/* --- 管理者ページ 各一覧 --- */
+#employee-list {
+  display: grid;
+  grid-template-columns: 10% repeat(6, 1fr);
+  gap: 1px;
+}
+#employee-list > div {
+  text-align: center;
+  background-color: gainsboro;
+  padding: 0.5rem;
+}
+#employee-list > div:nth-of-type(-n+7) {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+
+#voice-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+#voice-list > div {
+  text-align: center;
+  background-color: gainsboro;
+  padding: 0.5rem;
+}
+#voice-list > div:nth-of-type(-n+4) {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+
+#awards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+#awards-list > div {
+  text-align: center;
+  background-color: gainsboro;
+  padding: 0.5rem;
+}
+#awards-list > div:nth-of-type(-n+4) {
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+
+/* --- フッター --- */
+footer {
+  position: sticky;
+  top: 100vh;
+  width: 100%;
+  font-size: 0.7rem;
+  background-color: mediumvioletred;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

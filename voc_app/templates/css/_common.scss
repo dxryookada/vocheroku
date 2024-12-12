@@ -1,0 +1,45 @@
+/* --- 共通CSS --- */
+%header {
+  padding-left: 0.7rem;
+  border-left: solid 0.5rem $c-base;
+}
+html {
+  font-size: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  &.survey-body {
+    max-width: 430px;
+  }
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+p {
+  margin: 0;
+}
+h2 {
+  font-size: clamp(24px, 2.6vw, 28px);
+  &.survey-header {
+    @extend %header;
+    display: inline-block;
+  }
+}
+h3 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  @extend %header;
+}

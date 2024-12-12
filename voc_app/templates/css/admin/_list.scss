@@ -1,0 +1,31 @@
+/* --- 管理者ページ 各一覧 --- */
+@mixin list($n, $grid) {
+  display: grid;
+  grid-template-columns: $grid;
+  gap: 1px;
+  > div {
+    text-align: center;
+    background-color: gainsboro;
+    padding: 0.5rem;
+    &:nth-of-type(-n+#{$n}) {
+      background-color: gray;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+// 従業員一覧ページ
+#employee-list {
+  @include list(7, 10% repeat(6, 1fr));
+}
+
+// お客様の声一覧ページ
+#voice-list {
+  @include list(4, repeat(4, 1fr));
+}
+
+// 表彰状贈呈一覧ページ
+#awards-list {
+  @include list(4, repeat(4, 1fr));
+}
