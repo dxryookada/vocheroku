@@ -1,0 +1,25 @@
+{% extends 'base_employee.html' %}
+{% load static %}
+{% block title %}ログイン{% endblock title %}
+
+{% block content %}
+<article class="w-50 p-2 m-auto">
+  <h2>お客様の声アプリ</h2>
+  <p class="mb-4">Voice of the Customer App</p>
+  <!-- ログイン -->
+  <section class="p-4 border border-secondary shadow bg-body-tertiary rounded">
+    <h3 class="mb-3">ログイン</h3>
+    <form action="index.html" method="get">
+      <div id="login-form" class="mb-4">
+        <label for="id">ユーザー名</label>
+        <input type="text" name="id" id="id" class="form-control">
+        <label for="password">パスワード</label>
+        <input type="password" name="password" id="password" class="form-control">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-secondary">ログイン</button>
+      </div>
+    </form>
+  </section>
+</article>
+{% endblock content %}

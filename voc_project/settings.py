@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'voc_app',
+    'employee_app',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,11 @@ ROOT_URLCONF = 'voc_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'voc_app/templates'),
+            os.path.join(BASE_DIR, 'employee_app/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +122,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# 静的ファイルのURLのベースパス
 STATIC_URL = 'static/'
+
+# プロジェクト全体で共通の静的ファイルが保存されているディレクトリ（本番環境では通常使用しません）
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),  # プロジェクト直下のstaticディレクトリ
+]
+
+# 本番環境でcollectstaticコマンドで集めた静的ファイルの保存場所
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
