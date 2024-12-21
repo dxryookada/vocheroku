@@ -5,10 +5,11 @@ from django.views.generic import TemplateView
 class LoginView(TemplateView):
   template_name = "login.html"
 
-# --- 一般従業員ページ
+# --- 一般従業員ページ（トップ）
 class GeneralView(TemplateView):
   template_name = "general/general.html"
 
+# --- 一般従業員ページ（データ更新）
 class UpdateView(TemplateView):
   template_name = "general/update.html"
 
