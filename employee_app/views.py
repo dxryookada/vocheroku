@@ -13,6 +13,6 @@ class GeneralView(TemplateView):
 class UpdateView(TemplateView):
   template_name = "general/update.html"
 
-# --- 管理者ページ
+# --- 管理者ページ（トップ）
 class AdminView(TemplateView):
   template_name = "admin/admin.html"
